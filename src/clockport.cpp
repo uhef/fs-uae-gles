@@ -1,5 +1,5 @@
 /*
-/*
+ *
  * emulating the clockport for external hw
  *
  * written by Christian Vogelgsang
@@ -277,7 +277,7 @@ void clockport_map(void)
 
 void clockport_cleanup(void)
 {
-  if(link_valid && shm_ptr->client) {
+  if(link_valid && shm_ptr->client) {
     puts("cp: sending QUIT");
     shm_ptr->event = EV_QUIT;
     shm_ptr->cycles = get_cycles();
